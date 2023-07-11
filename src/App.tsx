@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import './App.css';
 import { Header } from './components/header/Header';
 import { TodoMain } from './components/todoPage/TodoMain';
+import './App.css';
 
 const App: FC = () => {
   return (
-    <div className="appWrapper">
+    <div className='appWrapper'>
       <Header />
       <TodoMain />
     </div>
