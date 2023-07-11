@@ -19,7 +19,9 @@ ___
    4. There is an opportunity to edit each task from the todo list
  
 **The application was created using adaptive css :neckbeard:**
+
 **Stack:** React, React hooks(useContext, useRef, useState, useEffect), TypeScript, css-modules, nanoid, tabler icons.
+
 **Deploy:** [https://repmacrypn.github.io/todo-list/]
 ___
 **Created by Artem Efimovich :relieved:**
