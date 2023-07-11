@@ -2,7 +2,7 @@ import { Pencil } from 'tabler-icons-react';
 import { ChangeEvent, useState } from 'react';
 import { nanoid } from 'nanoid';
 import s from './TodoTask.module.css'
-import { ITask } from "../../interfaces/interfaces";
+import { ITask } from '../../interfaces/interfaces';
 
 interface TaskAdderProps {
     setTodos(todosArr: ITask[]): void;
@@ -34,7 +34,7 @@ export const TaskAdder = ({ setTodos, todos }: TaskAdderProps) => {
                 className={s.addTodoInput}
                 value={taskValue}
                 onChange={handleChange}
-                placeholder="New task..."
+                placeholder='New task...'
                 type='text'
             />
             <button

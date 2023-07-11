@@ -1,6 +1,6 @@
-import { TodoTask } from "./TodoTask";
+import { TodoTask } from './TodoTask';
 import s from './TodoTask.module.css'
-import { ITask } from "../../interfaces/interfaces";
+import { ITask } from '../../interfaces/interfaces';
 
 interface TodoListProps {
     todos: ITask[];
