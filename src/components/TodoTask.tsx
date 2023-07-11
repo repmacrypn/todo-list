@@ -1,5 +1,6 @@
 import { ChangeEvent, useState, useRef, useEffect } from 'react';
 import { ITask } from '../interfaces';
+import '../App.css'
 
 interface Props {
     todo: ITask;
@@ -17,11 +18,16 @@ export const TodoTask = ({ todo, removeTaskOnClick }: Props) => {
         setItemValue(e.target.value)
     }
 
-    let todoItem
+    const handleCheckboxClick = (e: React.MouseEvent<HTMLInputElement>) => {
+        e.stopPropagation()
+    }
+
+    let todoItem: React.ReactElement<HTMLInputElement>
 
     if (editNum) {
         todoItem = (
             <input
+                className='addTodoInput'
                 ref={inputRef}
                 value={itemValue}
                 onChange={handleItemChange}
@@ -30,12 +36,26 @@ export const TodoTask = ({ todo, removeTaskOnClick }: Props) => {
         )
     } else {
         todoItem = (
-            <div>
-                <input type='checkbox' checked={isDone} onChange={() => setIsDone(value => !value)} />
-                <span onClick={() => setEditNum(todo.id)}>
+            <div
+                onClick={() => setEditNum(todo.id)}
+                className='todoItemsWrapper'
+            >
+                <input
+                    onClick={handleCheckboxClick}
+                    className='todoCheckedInput'
+                    type='checkbox'
+                    checked={isDone}
+                    onChange={() => setIsDone(value => !value)}
+                />
+                <div
+                    className='todoItemValue'
+                >
                     {itemValue}
-                </span>
-                <button onClick={() => removeTaskOnClick(todo.id)}>
+                </div>
+                <button
+                    className='todoButton removeTodoButton'
+                    onClick={() => removeTaskOnClick(todo.id)}
+                >
                     X
                 </button>
             </div>

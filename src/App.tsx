@@ -1,6 +1,5 @@
 import { FC, ChangeEvent, useState } from 'react';
 import { nanoid } from 'nanoid';
-import { TextInput } from '@mantine/core';
 import './App.css';
 import { ITask } from './interfaces';
 import { TodoTask } from './components/TodoTask';
@@ -50,19 +49,25 @@ const App: FC = () => {
       </header>
       <main className='mainContainer'>
         <div className='addTaskWrapper'>
-          <TextInput
+          <Pencil
+            size={40}
+            color='grey'
+          />
+          <input
+            className='addTodoInput'
             value={taskValue}
             onChange={handleChange}
             placeholder="New task..."
-            radius="md"
-            icon={<Pencil />}
+            type='text'
           />
-          <button onClick={addTaskOnClick}>
+          <button
+            className='todoButton addTodoButton'
+            onClick={addTaskOnClick}>
             Add task
           </button>
         </div>
-        <div>
-          {todosResult}
+        <div className='todos'>
+          {todosResult.length ? todosResult : <div className='emptyState'>No tasks yet :(</div>}
         </div>
       </main>
     </div>
