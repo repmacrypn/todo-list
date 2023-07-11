@@ -69,7 +69,7 @@ const TodoDivItem = ({ todo, itemValue, setEditNum }: TodoDivItemProps) => {
     return (
         <div
             onClick={() => setEditNum(todo.id)}
-            className={s.todoItemsWrapper}
+            className={`${s.todoItemsWrapper} ${s['todoDone' + isDone]}`}
         >
             <input
                 onClick={handleCheckboxClick}

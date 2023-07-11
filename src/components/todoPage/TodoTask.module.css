@@ -80,6 +80,18 @@
     margin-bottom: 10px;
 }
 
+.todoItemsWrapper:hover {
+    background-color: rgb(208, 228, 246);
+}
+
+.todoDonetrue {
+    background-color: grey !important;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+    margin: 0 10px 10px;
+}
+
 .todoItemValue {
     padding: 10px 0;
     max-width: 68%;
