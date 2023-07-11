@@ -64,7 +64,6 @@
 
 .todos {
     height: 100%;
-    min-height: 66vh;
     background-color: rgba(77, 162, 92, 0.1);
     border-radius: 10px;
     padding: 30px 0;
