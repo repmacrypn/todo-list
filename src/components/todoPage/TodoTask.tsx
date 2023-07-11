@@ -1,6 +1,6 @@
 import { ChangeEvent, useState, useRef, useEffect } from 'react';
+import s from './TodoTask.module.css'
 import { ITask } from '../../interfaces/interfaces';
-import '../../App.css'
 import { useTodoContext } from '../../context/context';
 
 interface TodoTaskProps {
@@ -21,7 +21,7 @@ export const TodoTask = ({ todo }: TodoTaskProps) => {
     if (editNum) {
         todoItem = (
             <input
-                className='addTodoInput'
+                className={s.addTodoInput}
                 ref={inputRef}
                 value={itemValue}
                 onChange={handleItemChange}
@@ -69,20 +69,20 @@ const TodoDivItem = ({ todo, itemValue, setEditNum }: TodoDivItemProps) => {
     return (
         <div
             onClick={() => setEditNum(todo.id)}
-            className='todoItemsWrapper'
+            className={s.todoItemsWrapper}
         >
             <input
                 onClick={handleCheckboxClick}
-                className='todoCheckedInput'
+                className={s.todoCheckedInput}
                 type='checkbox'
                 checked={isDone}
                 onChange={() => setIsDone(value => !value)}
             />
-            <div className='todoItemValue'>
+            <div className={s.todoItemValue}>
                 {itemValue}
             </div>
             <button
-                className='todoButton removeTodoButton'
+                className={`${s.todoButton} ${s.removeTodoButton}`}
                 onClick={() => removeTaskOnClick(todo.id)}
             >
                 X

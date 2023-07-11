@@ -1,5 +1,6 @@
-import { ITask } from "../../interfaces/interfaces";
 import { TodoTask } from "./TodoTask";
+import s from './TodoTask.module.css'
+import { ITask } from "../../interfaces/interfaces";
 
 interface TodoListProps {
     todos: ITask[];
@@ -14,7 +15,7 @@ export const TodoList = ({ todos }: TodoListProps) => {
     })
 
     return (
-        <div className='todos'>
+        <div className={s.todos}>
             {todosResult.length ?
                 todosResult :
                 <EmptyState />}
@@ -24,6 +25,6 @@ export const TodoList = ({ todos }: TodoListProps) => {
 
 export const EmptyState = () => {
     return (
-        <div className='emptyState'>No tasks yet :(</div>
+        <div className={s.emptyState}>No tasks yet :(</div>
     )
 }

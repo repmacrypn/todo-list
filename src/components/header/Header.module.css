@@ -1,0 +1,15 @@
+.headerContainer {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 80px;
+    background-color: rgb(77, 162, 92);
+}
+
+.headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
