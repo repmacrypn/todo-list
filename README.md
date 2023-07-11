@@ -18,6 +18,7 @@ ___
    3. The user can mark todos which are already done
    4. There is an opportunity to edit each task from the todo list
  
+**The application was created using adaptive css :neckbeard:**
 **Stack:** React, React hooks(useContext, useRef, useState, useEffect), TypeScript, css-modules, nanoid, tabler icons.
 **Deploy:** [https://repmacrypn.github.io/todo-list/]
 ___
